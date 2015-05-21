@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="ghostTownGrey" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- Social Media Tags needed-->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+
+  </head>
+<body>
+
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div class="jumbotron">
+    <img src="http:\\localhost:8080\src\assets\img\gtg_logo_print.png" class="img-responsive" alt="Responsive image">
+  </div>
+  <div>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+                ng-click="menuCollapsed = ! menuCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" collapse="menuCollapsed">
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active">
+            <a href ui-sref="news">
+              <i class="fa fa-laptop"></i>
+              News
+            </a>
+          </li>
+          <li ui-sref-active="active">
+            <a href ui-sref="live">
+              <i class="fa fa-ticket"></i>
+              Live
+            </a>
+          </li>
+          <li>
+            <a href="https://ghosttowngrey.bandcamp.com/">
+              <i class="fa fa-shopping-cart"></i>
+              Store
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCV41tsPikdc7OSMqPuRIdpw">
+              <i class="fa fa-video-camera"></i>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-comments"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" ui-view="main"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <ul class="social">
+          <li><a target="_blank" href="https://www.facebook.com/GhostTownGrey"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a target="_blank" href="https://twitter.com/ghosttowngrey"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a target="_blank" href="https://www.youtube.com/channel/UCV41tsPikdc7OSMqPuRIdpw"><i class="fa fa-youtube-square"></i></a></li>
+        </ul>
+
+
+        <p>
+          (c) 2015 Ghost Town Grey
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
