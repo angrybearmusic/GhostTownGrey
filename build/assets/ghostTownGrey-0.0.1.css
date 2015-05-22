@@ -5886,24 +5886,9 @@ h2 {
  *
  * TODO: In a later version of this boilerplate, I'd like to automate this.
  */
-.marketing .row {
-  margin-bottom: 10px;
+.fb_iframe_widget {
+  width: 100% !important;
 }
-.marketing .row:last-child {
-  margin-bottom: 0;
-}
-.marketing h4 [class*=" icon-"],
-.marketing h4 [class^="icon-"] {
-  margin-right: 5px;
-  vertical-align: -10%;
-  font-size: 28px;
-  line-height: 1;
-}
-span {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+#store {
+  height: 1050px !important;
 }

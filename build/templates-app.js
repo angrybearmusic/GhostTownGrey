@@ -1,4 +1,4 @@
-angular.module('templates-app', ['contact/contact.tpl.html', 'live/live.tpl.html', 'news/news.tpl.html']);
+angular.module('templates-app', ['contact/contact.tpl.html', 'live/live.tpl.html', 'news/news.tpl.html', 'store/store.tpl.html', 'videos/videos.tpl.html']);
 
 angular.module("contact/contact.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/contact.tpl.html",
@@ -332,13 +332,30 @@ angular.module("news/news.tpl.html", []).run(["$templateCache", function($templa
     "\n" +
     "</div>\n" +
     "\n" +
-    "<div class=\"container\">\n" +
-    "  <div class=\"fb-page\" data-href=\"https://www.facebook.com/GhostTownGrey\" data-width=\"500\" data-hide-cover=\"false\" data-show-facepile=\"false\" data-show-posts=\"true\">\n" +
+    "<div class=\"jumbotron\">\n" +
+    "  <div class=\"fb-page\" data-href=\"https://www.facebook.com/GhostTownGrey\" data-width=\"800px\" data-hide-cover=\"false\" data-show-facepile=\"false\" data-show-posts=\"true\">\n" +
     "    <div class=\"fb-xfbml-parse-ignore\">\n" +
     "      <blockquote cite=\"https://www.facebook.com/GhostTownGrey\">\n" +
     "        <a href=\"https://www.facebook.com/GhostTownGrey\">Ghost Town Grey</a>\n" +
     "      </blockquote>\n" +
     "    </div>\n" +
     "  </div>\n" +
+    "</div>");
+}]);
+
+angular.module("store/store.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("store/store.tpl.html",
+    "<div id=\"store\" class=\"jumbotron\" ng-controller=\"StoreCtrl\">\n" +
+    "\n" +
+    "  <iframe src=\"https://ghosttowngrey.bandcamp.com/\" height=\"100%\" width=\"100%\"/>\n" +
+    "\n" +
+    "</div>");
+}]);
+
+angular.module("videos/videos.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("videos/videos.tpl.html",
+    "<div class=\"jumbotron\" ng-controller=\"VideosCtrl\">\n" +
+    "  <iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/G1ppIGJ2MXA\" frameborder=\"0\" allowfullscreen></iframe>\n" +
+    "  <iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/zUTYEmXOokQ\" frameborder=\"0\" allowfullscreen></iframe>\n" +
     "</div>");
 }]);

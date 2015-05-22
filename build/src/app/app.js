@@ -4,6 +4,8 @@ angular.module( 'ghostTownGrey', [
   'ghostTownGrey.news',
   'ghostTownGrey.contact',
   'ghostTownGrey.live',
+  'ghostTownGrey.store',
+  'ghostTownGrey.videos',
   'ui.router'
 ])
 
