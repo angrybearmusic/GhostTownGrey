@@ -90,7 +90,6 @@ angular.module('ghostTownGrey.live', [
 
   $scope.addShowToggle = function () {
     $scope.addShowShow = !$scope.addShowShow;
-    console.log($scope.addShowShow);
   };
 
   
@@ -124,6 +123,5 @@ angular.module('ghostTownGrey.live', [
       }
     }
   };
-
   $scope.resetForm();
 });

@@ -38,7 +38,7 @@ angular.module('ghostTownGrey.live', [
     }
   });
 
-  $scope.addShowShow = false;
+  $scope.addShowShow = true;
 
   $scope.formMaster = {
     date: '',
@@ -123,4 +123,5 @@ angular.module('ghostTownGrey.live', [
       }
     }
   };
+  $scope.resetForm();
 });
